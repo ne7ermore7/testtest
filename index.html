@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+      integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.js"
+      type="text/javascript"
+    ></script>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+      integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="http://www.fontonline.ir/css/IranNastaliq.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet" type="text/css" />
+    <style>
+    /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- App -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+@font-face {
+    font-family: iran-sans;
+    src: url("./fonts/IRANSans.ttf");
+    font-weight: normal;
+  }
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-family: iran-sans;
+  }
+  html {
+    height: 100%;
+  }
+  
+  /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Login -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+  .LoginPage {
+    background-image: url('./bg.jpg');
+    -webkit-background-size : cover;
+    -moz-background-size : cover;
+    background-size: cover;
+    background-position: 50% 0;
+    height: 100vh;
+    width: 100%;
+    color: white;
+  }
+  
+  .overlay {
+    padding: 25px 120px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border: 1.5px solid white;
+    box-shadow: 20px 20px 17px #000;
+    color: #000;
+    animation: float 6s ease-in-out infinite;
+  }
+  .golestanBrand {
+    color: black; 
+    text-shadow: #fff 1px 1px;
+  
+    font-family: IranNastaliq, "IranNastaliq", tahoma;
+  }
+  
+  .abruLogo {
+    width: 90px;
+  }
+  
+  .vorood {
+    width: 80%;
+    border: 1px #000 solid;
+    border-radius: 7px;
+    color: black;
+      padding: 11px 0;
+  }
+  
+  .vorood:hover {
+    background-color: aquamarine;
+    color: black;
+  }
+  
+  #usr,
+  #pwd {
+    border-radius: 5px;
+  }
+  
+  #showPass {
+    position: relative;
+    bottom: 30px;
+    left: 115px;
+    color: black;
+  }
+  #ForgetUsername {
+    margin-top: 5px;
+  }
+  @keyframes float {
+      0% {
+          transform: translatey(0px);
+      }
+      50% {
+          transform: translatey(-20px);
+      }
+      100% {
+          transform: translatey(0px);
+      }
+  }
+  
+    
+    </style>
+
+
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="LoginPage text-center d-flex flex-column justify-content-center align-items-center">
+            <div class="overlay flash animated">
+              <h3>سیستم جامع دانشگاهی</h3>
+              <br />
+              <br />
+              <h1 class="display-2 golestanBrand">گلســتان</h1>
+              <figure>
+                <img
+                  src="./uni.png"
+                  class="img-responsive abruLogo"
+                ></img>
+              </figure>
+              <form>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usr"
+                    placeholder="نام کاربری"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="pwd"
+                    placeholder="کلمه عبور"
+                  />
+                  <i id="showPass" class="fa fa-eye"></i>
+                </div>
+                <a
+                  class="btn vorood"
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i id="fa-sign-in" class="fa fa-sign-in animated"></i> ورود به
+                  سیستم
+                </a>
+              </form>
+              <br />
+              <div id="ForgetPassword">
+                <a to="/ForgetPassword">
+                  رمز عبور خود را فراموش کرده اید؟
+                </a>
+              </div>
+              <div id="ForgetUsername">
+                <a to="/ForgetUsername">
+                  نام کاربری خود را فراموش کرده اید؟
+                </a>
+              </div>
+            </div>
+          </div>
+    </div>
+<script>
+$(document).ready(function(){
+
+    $('.LoginPage').ripples({
+        resolution:512,
+        dropRadius:20,
+        pertubrance:0.04,
+    })
+    
+    // setInterval(function(){
+    //     $el.ripples('drop',x,y,dropRadius,strength);
+    // },400)
+});
+</script>
+  </body>
+</html>
